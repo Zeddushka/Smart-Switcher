@@ -32,6 +32,7 @@ https://github.com/Zeddushka/Android-Architecture-Framework
 * Make settings entering transparent
 * Make some graphical smmoth and pretty information about current statuses on logon (like wifi idleing or e.t.c.)
 * Make scheduled anebling of wifi (like: enable WiFi on 10 minutes every work day at 18:00 and disableing it every work day at 7:00 - when you are away from your home's WiFi; enable bluetooth at 17:00 when you've just sit in your car for connecting to car's devices)
+* Check in DOZE
 
 
 ## Screenshots
