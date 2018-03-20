@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.settings.ViewSettings">
+
+    <TextView
+        android:id="@+id/textWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/wifi"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkWifiDisable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        android:text="@string/check_disable_when_idle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWifi" />
+
+    <TextView
+        android:id="@+id/textWifiDisable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkWifiDisable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/checkWifiDisable"
+        app:layout_constraintTop_toTopOf="@+id/checkWifiDisable" />
+
+    <CheckBox
+        android:id="@+id/checkWifiEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        android:text="@string/check_enable_when_see_known"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkWifiDisable" />
+
+    <TextView
+        android:id="@+id/textWifiEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkWifiEnable"
+        app:layout_constraintStart_toEndOf="@+id/checkWifiEnable"
+        app:layout_constraintTop_toTopOf="@+id/checkWifiEnable" />
+
+    <!-- Bluetooth -->
+
+    <TextView
+        android:id="@+id/textBluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/bluetooth"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkWifiEnable" />
+
+    <CheckBox
+        android:id="@+id/checkBluetoothDisable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        android:text="@string/check_disable_when_idle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBluetooth" />
+
+    <TextView
+        android:id="@+id/textBluetoothDisable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBluetoothDisable"
+        app:layout_constraintStart_toEndOf="@+id/checkBluetoothDisable"
+        app:layout_constraintTop_toTopOf="@+id/checkBluetoothDisable" />
+
+    <CheckBox
+        android:id="@+id/checkBluetoothEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:enabled="false"
+        android:text="@string/check_enable_when_see_known"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBluetoothDisable" />
+
+    <TextView
+        android:id="@+id/textBluetoothEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBluetoothEnable"
+        app:layout_constraintStart_toEndOf="@+id/checkBluetoothEnable"
+        app:layout_constraintTop_toTopOf="@+id/checkBluetoothEnable" />
+
+</android.support.constraint.ConstraintLayout>

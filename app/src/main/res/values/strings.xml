@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Smart Switcher</string>
+    <string name="error_fetch_settings">Error fetching settings</string>
+    <string name="title_settings">Settings</string>
+    <string name="idle_for">idle for</string>
+    <string name="check_every">check every</string>
+
+    <string name="dialog_picker_positive">Set</string>
+    <string name="dialog_picker_neutral">Cancel</string>
+
+    <string name="period_picker_name_wifi_enable">WiFi lookup every</string>
+    <string name="period_picker_name_wifi_disable">WiFi is idle after</string>
+    <string name="period_picker_name_bt_disable">Bluetooth is idle after</string>
+    <string name="period_picker_name_bt_enable">Bluetooth lookup every</string>
+
+    <string name="text_ending_minute_1">minute</string>
+    <string name="text_ending_minute_1given">minute</string>
+    <string name="text_ending_minute_1x">minutes</string>
+    <string name="text_ending_minute_1xgiven">minutes</string>
+    <string name="text_ending_minute_234">minutes</string>
+    <string name="text_ending_minute_other">minutes</string>
+    <string name="check_disable_when_idle">Disable when idle</string>
+    <string name="check_enable_when_see_known">Enable when see known</string>
+    <string name="wifi">WiFi</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="dialog_permission_needed_message">%1$s requires coarse location permission to access state of WiFi and Bluetooth modules (this is Android restriction). The %1$s will never use your location</string>
+    <string name="dialog_permission_needed_title">Permission needed</string>
+    <string name="dialog_permission_grant">Grant</string>
+    <string name="dialog_permission_exit">Exit</string>
+
+</resources>

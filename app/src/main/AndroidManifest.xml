@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.kartashovaa.idledisabler">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name="ru.kartashovaa.idledisabler.SmartSwitcherApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="ru.kartashovaa.idledisabler.feature.logon.ViewLogon"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="ru.kartashovaa.idledisabler.feature.settings.ViewSettings"
+            android:screenOrientation="portrait"
+            android:label="@string/title_settings">
+        </activity>
+
+        <service
+            android:name="ru.kartashovaa.idledisabler.services.BluetoothEnableService"
+            android:exported="false" />
+        <service
+            android:name="ru.kartashovaa.idledisabler.services.BluetoothDisableService"
+            android:exported="false" />
+        <service
+            android:name="ru.kartashovaa.idledisabler.services.WifiDisableService"
+            android:exported="false" />
+        <service
+            android:name="ru.kartashovaa.idledisabler.services.WifiEnableService"
+            android:exported="false" />
+
+        <receiver android:name="ru.kartashovaa.idledisabler.receivers.WifiStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+                <action android:name="android.net.wifi.supplicant.STATE_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="ru.kartashovaa.idledisabler.receivers.BluetoothStateReceiver">
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.FOUND"/>
+                <action android:name="android.bluetooth.adapter.action.DISCOVERY_STARTED"/>
+                <action android:name="android.bluetooth.adapter.action.DISCOVERY_FINISHED"/>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+                <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="ru.kartashovaa.idledisabler.receivers.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
